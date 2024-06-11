@@ -15,8 +15,6 @@ public class Program {
 		x = new triangle();
 		y = new triangle();
 		
-		double  areax,areay, p;
-	
 		System.out.println("Enter the measures of triangle x: ");
 		x.a = sc.nextDouble();
 		x.b= sc.nextDouble();
@@ -26,11 +24,8 @@ public class Program {
 		y.b = sc.nextDouble();
 		y.c = sc.nextDouble();
 		
-		p = (x.a + x.b + x.c) / 2;
-		areax = Math.sqrt(p * (p - x.a) * (p - x.b) * (p - x.c)); 
-		
-		p = (y.a + y.b + y.c) / 2;
-		areay = Math.sqrt(p * (p - y.a) * (p - y.b) * (p - y.c)); 
+		double areax = x.area();  
+		double areay = y.area();
 		
 		System.out.printf("Triangle x area: %.4f%n", areax);
 		System.out.printf("Triangle y area: %.4f%n", areay);
